@@ -1,0 +1,63 @@
+//using parent class 
+.top
+{
+  font-size:10px;
+  .first
+  {
+    font-size : 15px;
+  }
+  //if you dont want to make it a parent element
+  @at-root
+  {
+    .second
+    {
+      font-size : 20px;
+    }
+    .third
+    {
+      font-size : 20px;
+    }
+  }
+  .fourth
+  {
+    font-size  : 10px;
+  }
+}
+
+//using extend
+.master
+{
+  color: blue;
+}
+.emphasis
+{
+  @extend .master;
+  
+  font-wieght:10px;
+}
+//using media
+
+.master
+{
+  color : yellow;
+  @media (max-width  : 50px)
+  {
+    width :100%;
+  };
+}
+.emphasis
+{
+  font-weight : 50px;
+}
+
+
+//using imports
+.try
+{
+  font-weight : 10px;
+}
+
+p
+{
+  @import   "try";
+}
