@@ -1,0 +1,30 @@
+//extending its functionality using pads
+
+@mixin pad ($pads...)
+{
+  color : $pads;
+}
+
+.one
+{
+  @include pad(yellow);
+}
+.two
+{
+  @include pad(blue green);
+}
+
+@mixin gopal 
+{
+  color: blue;
+  @content ;
+}
+
+p
+{
+  @include gopal
+  {
+    font-size:20px;
+    padding:10px;
+}
+}
