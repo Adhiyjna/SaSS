@@ -1,0 +1,47 @@
+//condition statements in SASS
+
+
+@mixin prabhat($condition)
+{
+ $color : if($condition,yellow,blue);
+  color  : $color;
+  $font-size : if($condition,orange,red);
+  font-size : $font-size;
+}
+
+p
+{
+  @include prabhat(true );
+}
+
+q
+{
+  @include prabhat(true);
+}
+//using for loop 
+
+@for $i from 1 through 12
+{
+  .col-#{$i} {width:100/12 * $i;}
+}
+@each $usr in billy,raju,mukesh,tanmay
+{
+  .#{$usr}-avatar { font-size :20 px; }
+}
+@each $mob in sukesh,rajneesh,vikesh
+{
+  .#{$mob}-avatar { font-size : 34px;}
+}
+
+
+
+
+@while $x < 15 
+{
+  .col-#{$x}
+  {
+    width : 100/12 * $x;
+  }
+  $x = $x + 1 
+};
+
