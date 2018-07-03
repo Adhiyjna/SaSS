@@ -1,0 +1,11 @@
+
+
+@debug 10px + 20px; 
+
+$warn :10px;
+@warn "{$warn}" ; 
+
+
+//bug in sass
+$test : 1px;
+@error "{#test}" ;
