@@ -1,0 +1,43 @@
+//reusuability
+
+@mixin linx( $link , $visited , $hover , $active)
+{
+  a:link
+  {
+    color  : $link;
+  }
+  a:visited
+  {
+    color: $visited;
+  }
+  a:hover
+  {
+    color : $hover;
+  }
+  a:active
+  {
+    color: $active;
+  }
+}
+
+p
+{
+  @include linx(blue,green,yellow,orange);
+}
+
+@mixin prabhat($link, $active : yellow)
+{
+  a:link 
+  {
+    color  : dark blue;
+  }
+}
+p
+{
+  @include prabhat(blue);
+}
+
+
+
+
+//using default values
